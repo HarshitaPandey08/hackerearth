@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int t,n=7,f,a=0;
+	scanf("%d",&t);
+	while(t>0)
+	{
+		scanf("%d",&f);
+		if((abs(f-a))<(abs(n-f)))
+		{
+			printf("A\n");
+			a=f;
+
+
+		}
+		else if((abs(f-a))>(abs(n-f)))
+		{
+			printf("B\n");
+			n=f;
+		}
+		else if((abs(f-a)) ==(abs(n-f)))
+		{
+			printf("A\n");
+			a=f;
+		}
+		t--;
+
+
+	}
+}
