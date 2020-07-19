@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int t;
+	scanf("%d",&t);
+	while(t>0)
+	{
+		int f=0;
+		char s1[100000],s2[100000];
+		scanf("%s%s",s1,s2);
+		int first[26]={0};
+		int second[26]={0};
+		int i=0;
+		while(s1[i]!='\0')
+		{
+			first[s1[i]-'a']++;
+			i++;
+		}
+		i=0;
+		while(s2[i]!='\0')
+		{
+			second[s2[i]-'a']++;
+			i++;
+		}
+		for(i=0;i<26;i++)
+		{
+			if(first[i]!=second[i])
+			{
+				printf("NO\n");
+				f++;
+				break;
+			}
+		}
+		if(f==0)
+		{
+			printf("YES\n");
+			
+
+		}
+		t--;
+
+	}
+}
