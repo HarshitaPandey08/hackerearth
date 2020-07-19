@@ -1,0 +1,28 @@
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	char s[100];
+	scanf("%s",s);
+	int l,i,z=0,o=0;
+	l=strlen(s);
+	for(i=0;i<l;i++)
+	{
+		if(s[i]=='z')
+		{
+			z++;
+		}
+		else
+		{
+			o++;
+		}
+
+	}
+	if(o==2*z)
+	{
+		printf("Yes");
+	}
+	else{
+		printf("No");
+	}
+}
