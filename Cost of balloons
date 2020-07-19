@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+	int t,g,p,n,i,j,c=0,k;
+	scanf("%d",&t);
+	while(t>0)
+	{
+		c=0;
+		int temp;
+		scanf("%d%d",&g,&p);
+		if(t%2!=0)
+		{
+			temp=g;
+			g=p;
+			p=temp;
+		}
+		scanf("%d",&n);
+		for(i=0;i<n;i++)
+		{
+			scanf("%d%d",&j,&k);
+			if(j==0 && k==1)
+			{
+				c=c+p;
+			}
+			else if(j==1 && k==0)
+			{
+				c=c+g;
+			}
+			else if (j==1 && k==1)
+			{
+				c=c+g+p;
+			}
+			
+		}
+		printf("%d\n",c);
+
+		t--;
+	}
+
+}
