@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+	int n,sh,sm,eh,em,t1,t2;
+	scanf("%d",&n);
+	while(n>0)
+	{
+		scanf("%d%d%d%d",&sh,&sm,&eh,&em);
+		if(em<sm)
+		{
+			eh=eh-1;
+			em=em+60;
+		}
+		t1=eh-sh;
+		t2=em-sm;
+		printf("%d %d\n",t1,t2);
+		n--;
+
+	}
+}
