@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+	int t;
+	scanf("%d",&t);
+	while(t>0)
+	{
+		char m[10000],n[10000];
+		scanf("%s",m);
+		scanf("%s",n);
+		int first[26]={0};
+		int second[26]={0};
+		int i=0,c,s=0,p;
+		while(m[i]!=0)
+		{
+			first[m[i]-'a']++;
+			i++;
+		}
+		i=0;
+		while(n[i]!=0)
+		{
+			second[n[i]-'a']++;
+			i++;
+		}
+		for(c=0;c<26;c++)
+		{
+			if(first[c]!=second[c])
+			{
+			    p=abs(first[c]-second[c]);
+			    s=s+p;
+			}
+		}
+		printf("%d\n",s);
+		t--;
+	}
+	return 0;
+}
